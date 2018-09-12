@@ -8,6 +8,7 @@ public class Main {
         LinkedStack<Character> stack = new LinkedStack<Character>();
         for(int i = 0; i < str.length(); i++)
             stack.push(str.charAt(i));
+        System.out.println(stack);
         do {
             System.out.print(stack.pop());
         } while(stack.getSize() > 0);

@@ -1,3 +1,13 @@
+/*
+    Author:         Samuel Larsson
+    Copyright:      2018
+    Description:    A generic single-linked circular list. Used to reverse a string.
+
+    Compilation:    javac -d . LinkedStack.java
+    Execution:      java com.company.LinkedStack
+    Usage:          Write in a string and it will be printed out in reverse.
+ */
+
 package com.company;
 
 import java.util.Scanner;
@@ -21,14 +31,17 @@ public class LinkedStack<Item> {
          size = 0;
     }
 
+    // returns the size of the stack
     public int getSize() { return size; }
 
+    // adds a new element to the top of the stack
     public void push(Item item) {
          Node link = newest;
          newest = new Node(item, link);
          size++;
     }
 
+    // removes and returns the newest element of the stack
     public Item pop() {
          if(size == 0) return null;
          Item pass = newest.item;
@@ -38,6 +51,7 @@ public class LinkedStack<Item> {
          return pass;
     }
 
+    // returns the stack as a string
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
@@ -51,6 +65,7 @@ public class LinkedStack<Item> {
         return s.toString();
     }
 
+    // main for testing
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         LinkedStack<Character> stack = new LinkedStack<Character>();

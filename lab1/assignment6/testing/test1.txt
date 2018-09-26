@@ -1,0 +1,11 @@
+(({{{([(([[[(}}}
+{)}
+{[[))]{}]}
+}}]))]))]]{{((((())}}]]]
+
+Result should be:
+
+File parenthesis are not balanced.
+Round Brackets:   Too many opening brackets (by 2)
+Square Brackets:  Too many closing brackets (by 3)
+Curly Brackets:   Too many closing brackets (by 2)

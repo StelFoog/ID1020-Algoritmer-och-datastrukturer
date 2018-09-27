@@ -3,6 +3,7 @@
     Copyright:      2018
     Description:    A generic single-linked circular list. Used to reverse a string.
 
+    Dependancies:   None
     Compilation:    javac -d . LinkedStack.java
     Execution:      java com.company.LinkedStack
     Usage:          Write in a string and it will be printed out in reverse.

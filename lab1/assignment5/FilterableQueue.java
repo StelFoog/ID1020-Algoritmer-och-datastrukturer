@@ -3,6 +3,7 @@
     Copyright:      2018
     Description:    A generic queue built using a double-linked list with a filter function.
 
+    Dependancies:   None
     Compilation:    javac -d . FilterableQueue.java
     Execution:      java com.company.FilterableQueue
     Usage:          Select an option by entering the corresponding number and pressing enter.
@@ -86,6 +87,29 @@ public class FilterableQueue<Item> {
         return removedItems;
     }
 
+    public Item removeItemAt(int k) {
+        Item pass = null;
+        if(k == 1) {
+            pass = head.item;
+            head.back.next = null;
+            head = head.back;
+        } else if(k == size) {
+            pass = tail.item;
+            tail.next.back = null;
+            tail = tail.next;
+        } else if(k < size) {
+            Node current = head;
+            for(int i = 1; i < k; i++)
+                current = current.back;
+            pass = current.item;
+            current.next.back = current.back;
+            current.back.next = current.next;
+        } else
+            throw new NoSuchElementException();
+
+        return pass;
+    }
+
 
     // returns the entire queue as a string
     @Override
@@ -112,8 +136,9 @@ public class FilterableQueue<Item> {
             System.out.println("\n");
             System.out.println(" [1]    Enqueue");
             System.out.println(" [2]    Dequeue");
-            System.out.println(" [3]    Remove item(s)");
-            System.out.println(" [4]    Print queue");
+            System.out.println(" [3]    Remove item(s) with name");
+            System.out.println(" [4]    Remove item at position");
+            System.out.println(" [5]    Print queue");
             System.out.println();
             System.out.println(" [0]    End");
             System.out.print("\n > ");
@@ -135,6 +160,11 @@ public class FilterableQueue<Item> {
                     System.out.println("\nAmount removed:\n" + removed);
                     break;
                 case 4:
+                    System.out.println("Position to remove from:");
+                    int position = Integer.parseInt(in.nextLine());
+                    System.out.println("\nRemoved item:\n" + queue.removeItemAt(position));
+                    break;
+                case 5:
                     System.out.println("Queue:\n");
                     System.out.println(queue);
                     break;

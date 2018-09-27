@@ -3,6 +3,7 @@
     Copyright:      2018
     Description:    A generic queue built using a double-linked list.
 
+    Dependancies:   None
     Compilation:    javac -d . LinkedQueue.java
     Execution:      java com.company.LinkedQueue
     Usage:          Select an option by entering the corresponding number and pressing enter.

@@ -3,6 +3,7 @@
     Copyright:      2018
     Description:    A generic, iterable double-linked circular list.
 
+    Dependancies:   None
     Compilation:    javac -d . LinkedCircle.java
     Execution:      java com.company.LinkedCircle
     Usage:          Select an option by entering the corresponding number and pressing enter.

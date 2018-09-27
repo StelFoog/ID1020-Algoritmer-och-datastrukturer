@@ -3,6 +3,7 @@
   Copyright:      2018
   Description:    A program to reverse an input, both through recurcion and iteration.
 
+  Dependancies:   None
   Compilation:    gcc main.c -o main.o
   Execution:      ./main.o
   Usage:          Write in a string and it will be printed out in reverse.

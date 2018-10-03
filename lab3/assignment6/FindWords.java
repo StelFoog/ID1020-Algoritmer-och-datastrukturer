@@ -7,11 +7,10 @@
                     altered version of the frequency counter from Algorithms 4th ed.
 
     Dependancies:   StdIn.java
-    Compilation:    javac -d . HashTable.java StdIn.java
-    Execution:      java com.company.HashTable < inputFilename
+    Compilation:    javac -d . FindWords.java StdIn.java
+    Execution:      java com.company.FindWords word < inputFilename
     Usage:          Replace inputFilename with the file that should be read and
-                    the program will print out where the words ended up in the
-                    hashtable
+                    word with the word to be searched for
  */
 
  package com.company;

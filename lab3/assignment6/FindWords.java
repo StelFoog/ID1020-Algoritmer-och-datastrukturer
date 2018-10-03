@@ -8,9 +8,9 @@
 
     Dependancies:   StdIn.java
     Compilation:    javac -d . FindWords.java StdIn.java
-    Execution:      java com.company.FindWords word < inputFilename
+    Execution:      java com.company.FindWords str < inputFilename
     Usage:          Replace inputFilename with the file that should be read and
-                    word with the word to be searched for
+                    str with the word to be searched for
  */
 
  package com.company;
